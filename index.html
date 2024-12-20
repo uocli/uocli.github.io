@@ -1,8 +1,125 @@
-<html>
-  <head>
-    <title>Home Page</title>
-  </head>
-  <body>
-    <h1>Go to <a href="/blogs">Blogs</a></h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chenyang Li - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .project {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+        .project h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-link:hover {
+            background-color: #2980b9;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .feature {
+            flex-basis: 48%;
+            margin-bottom: 15px;
+        }
+
+        .feature i {
+            color: #3498db;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Chenyang Li</h1>
+    </div>
+</header>
+
+<main class="container">
+    <section class="project">
+        <h2>RecipeMate</h2>
+        <p>RecipeMate is an AI-powered recipe management and meal planning application that simplifies your culinary journey.</p>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-robot"></i>
+                AI-powered recipe generation
+            </div>
+            <div class="feature">
+                <i class="fas fa-heart"></i>
+                Save and share favorite recipes
+            </div>
+            <div class="feature">
+                <i class="fas fa-shopping-cart"></i>
+                Automatic grocery list creation
+            </div>
+        </div>
+        <a href="https://recipemate.uocli.me" target="_blank" class="project-link">Explore RecipeMate</a>
+    </section>
+</main>
+
+<footer class="container" style="text-align: center">
+    <p>© <span id="currentYear"></span> Chenyang Li. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+</body>
 </html>
